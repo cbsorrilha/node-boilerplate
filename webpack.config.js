@@ -24,17 +24,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
 
   entry: {
-    app: [
-      'eventsource-polyfill',
-      'webpack-hot-middleware/client',
-      'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
-      './src/index.js',
-    ],
-    vendor: [
-      'react',
-      'react-dom',
-    ],
+    app: './src/index.js'
   },
 
   output: {
@@ -84,11 +74,11 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity,
-      filename: 'vendor.js',
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   minChunks: Infinity,
+    //   filename: 'vendor.js',
+    // }),
     new webpack.DefinePlugin({
       'process.env': {
         CLIENT: JSON.stringify(true),

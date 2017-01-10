@@ -5,6 +5,7 @@ const catNames = ['Mia', 'Snowy', 'Felix']
 const Cats = () => {
     return (
         <div>
+            <h1>Cats</h1>
             <ul>
                 {
                     catNames.map((cat, i) => {
