@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Cats from './modules/cats/'
+import App from './modules/cats/'
 
 
- ReactDOM.render(<Cats />, document.getElementById('app'))
+ ReactDOM.render(<App />, document.getElementById('app'))
